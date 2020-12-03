@@ -1,0 +1,39 @@
+.App {
+  font-family: sans-serif;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 350px;
+  box-shadow: 0 0 6px 1px black;
+  padding: 1em;
+  margin-bottom: 2em;
+  border-radius: 1em;
+}
+
+img {
+  border-radius: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+}
+
+li {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 5px;
+}
