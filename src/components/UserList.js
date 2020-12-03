@@ -13,7 +13,7 @@ const UserList = () => {
 
   if (users) {
     return (
-      <section style={{ display: "flex", flexWrap: "wrap" }}>
+      <section>
         {users.map((user, index) => (
           <User key={user.id.value + index} user={user} />
         ))}
