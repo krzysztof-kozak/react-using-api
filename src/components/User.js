@@ -8,9 +8,10 @@ const User = (props) => {
     user: {
       name: { first: firstName, last: lastName },
       location: {
-        street: { name: streetName, number: streetNumber }
+        street: { name: streetName, number: streetNumber },
+        city
       },
-      city,
+
       email,
       registered: { date: registrationDate }
     }
