@@ -20,6 +20,7 @@ const UserList = () => {
             setReady(true);
           }, 2000);
         })
+        .catch(console.error)
     );
   }, []);
 
@@ -47,6 +48,8 @@ const UserList = () => {
         </Route>
       </Router>
     );
+  } else {
+    return <p>I could not load the users. Try refreshing the page </p>;
   }
 };
 
