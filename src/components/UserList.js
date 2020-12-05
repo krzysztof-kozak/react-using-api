@@ -18,7 +18,7 @@ const UserList = () => {
         .then(() => {
           setTimeout(() => {
             setReady(true);
-          }, 2000);
+          }, 1000);
         })
         .catch(console.error)
     );

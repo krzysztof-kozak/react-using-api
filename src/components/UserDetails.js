@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, Redirect } from "react-router-dom";
 import { MapContainer, TileLayer, Popup, Marker } from "react-leaflet";
 
 const UserDetails = ({ users }) => {
@@ -7,14 +7,20 @@ const UserDetails = ({ users }) => {
   const { id } = useParams();
 
   useEffect(() => {
-    setUser(...users.filter((user) => user.login.uuid === id));
+    if (users) {
+      setUser(...users.filter((user) => user.login.uuid === id));
+    }
   }, [users, id]);
+
+  if (!users) {
+    return <Redirect to="/" />;
+  }
 
   if (user) {
     const lat = user.location.coordinates.latitude;
     const lon = user.location.coordinates.longitude;
     const position = [parseFloat(lat), parseFloat(lon)];
-    console.log({ position });
+
     return (
       <>
         <h2>User Details</h2>
@@ -43,7 +49,7 @@ const UserDetails = ({ users }) => {
       </>
     );
   } else {
-    return <p>Loading</p>;
+    return <p>Loading...</p>;
   }
 };
 
