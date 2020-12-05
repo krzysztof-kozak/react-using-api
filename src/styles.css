@@ -2,6 +2,11 @@
   font-family: sans-serif;
 }
 
+.userLink {
+  color: initial;
+  text-decoration: initial;
+}
+
 section {
   display: flex;
   flex-wrap: wrap;
