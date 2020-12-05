@@ -5,8 +5,11 @@
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
+    "leaflet": "1.7.1",
     "react": "17.0.0",
     "react-dom": "17.0.0",
+    "react-leaflet": "3.0.2",
+    "react-placeholder": "4.0.3",
     "react-router-dom": "5.2.0",
     "react-scripts": "3.4.3"
   },
